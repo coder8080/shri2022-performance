@@ -12,6 +12,8 @@
     />
   </head>
   <body>
+    <link rel="stylesheet" type="text/css" href="reset.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <header class="header">
       <a href="/" class="header__logo" aria-label="Яндекс.Дом"></a>
       <button class="header__menu" aria-expanded="false">
@@ -490,8 +492,76 @@
 
       <div class="footer__copyright">© 1997–2022 ООО «Яндекс»</div>
     </footer>
-    <link rel="stylesheet" type="text/css" href="reset.min.css" async />
-    <link rel="stylesheet" type="text/css" href="styles.min.css" async />
-    <script async>(()=>{function e(e){let t=e.querySelectorAll(".section__tab"),i=[];for(let a of t)i.push(a.dataset.id);let n=e.querySelector(".section__tab_active").dataset.id,r=e.querySelector(".section__select");function s(t){let i=e.querySelector(`.section__tab[data-id=${t}]`),a=e.querySelector(`.section__panel[data-id=${t}]`),s=e.querySelector(".section__tab_active"),l=e.querySelector(".section__panel:not(.section__panel_hidden)");n=t,s.classList.remove("section__tab_active"),s.setAttribute("aria-selected","false"),s.removeAttribute("tabindex"),i.classList.add("section__tab_active"),i.setAttribute("aria-selected","true"),i.setAttribute("tabindex","0"),i.focus({preventScroll:!0}),l.classList.add("section__panel_hidden"),l.setAttribute("aria-hidden","true"),a.classList.remove("section__panel_hidden"),a.setAttribute("aria-hidden","false"),r.value=t}r.addEventListener("input",()=>{s(r.value)});let l=document.querySelector(".section__tabs");l.addEventListener("click",e=>{let t=e.target.dataset.id;s(t)}),l.addEventListener("keydown",e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;let t=i.indexOf(n);if(37===e.which)--t;else if(39===e.which)++t;else if(36===e.which)t=0;else{if(35!==e.which)return;t=i.length-1}t>=i.length?t=0:t<0&&(t=i.length-1),s(i[t]),e.preventDefault()})}function t(e){let t=!1,i=document.querySelector(".header__links");e.addEventListener("click",()=>{t=!t,e.setAttribute("aria-expanded",t?"true":"false"),e.querySelector(".header__menu-text").textContent=t?"Закрыть меню":"Открыть меню",i.classList.toggle("header__links_opened",t),i.classList.add("header__links-toggled")})}document.addEventListener("DOMContentLoaded",()=>{e(document.querySelector(".main__devices"));t(document.querySelector(".header__menu"))})})();</script>
+    <script async>
+      (() => {
+        function e(e) {
+          let t = e.querySelectorAll('.section__tab'),
+            i = [];
+          for (let a of t) i.push(a.dataset.id);
+          let n = e.querySelector('.section__tab_active').dataset.id,
+            r = e.querySelector('.section__select');
+          function s(t) {
+            let i = e.querySelector(`.section__tab[data-id=${t}]`),
+              a = e.querySelector(`.section__panel[data-id=${t}]`),
+              s = e.querySelector('.section__tab_active'),
+              l = e.querySelector(
+                '.section__panel:not(.section__panel_hidden)'
+              );
+            (n = t),
+              s.classList.remove('section__tab_active'),
+              s.setAttribute('aria-selected', 'false'),
+              s.removeAttribute('tabindex'),
+              i.classList.add('section__tab_active'),
+              i.setAttribute('aria-selected', 'true'),
+              i.setAttribute('tabindex', '0'),
+              i.focus({ preventScroll: !0 }),
+              l.classList.add('section__panel_hidden'),
+              l.setAttribute('aria-hidden', 'true'),
+              a.classList.remove('section__panel_hidden'),
+              a.setAttribute('aria-hidden', 'false'),
+              (r.value = t);
+          }
+          r.addEventListener('input', () => {
+            s(r.value);
+          });
+          let l = document.querySelector('.section__tabs');
+          l.addEventListener('click', (e) => {
+            let t = e.target.dataset.id;
+            s(t);
+          }),
+            l.addEventListener('keydown', (e) => {
+              if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+              let t = i.indexOf(n);
+              if (37 === e.which) --t;
+              else if (39 === e.which) ++t;
+              else if (36 === e.which) t = 0;
+              else {
+                if (35 !== e.which) return;
+                t = i.length - 1;
+              }
+              t >= i.length ? (t = 0) : t < 0 && (t = i.length - 1),
+                s(i[t]),
+                e.preventDefault();
+            });
+        }
+        function t(e) {
+          let t = !1,
+            i = document.querySelector('.header__links');
+          e.addEventListener('click', () => {
+            (t = !t),
+              e.setAttribute('aria-expanded', t ? 'true' : 'false'),
+              (e.querySelector('.header__menu-text').textContent = t
+                ? 'Закрыть меню'
+                : 'Открыть меню'),
+              i.classList.toggle('header__links_opened', t),
+              i.classList.add('header__links-toggled');
+          });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+          e(document.querySelector('.main__devices'));
+          t(document.querySelector('.header__menu'));
+        });
+      })();
+    </script>
   </body>
 </html>
