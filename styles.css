@@ -32,7 +32,6 @@ body {
   display: flex;
   flex: 0 0 auto;
   align-items: center;
-  /* min-height: 5.75rem; */
   height: 5.75rem;
   margin-bottom: 1.875rem;
   padding: 0 2.5rem;
@@ -50,12 +49,10 @@ body {
 }
 
 .header__logo {
-  /*  */
   flex: 0 0 auto;
   width: 6.75rem;
   height: 2.3125rem;
   margin-right: 3.25rem;
-  /*  */
   background: no-repeat 50% 50% url(assets/logo.svg);
   background-size: contain;
 }
@@ -68,7 +65,6 @@ body {
   padding: 0;
   background: 50% 50% no-repeat transparent url(assets/icon_list_m@1x.svg);
   border: none;
-  /*  */
   border-radius: 0;
   appearance: none;
   cursor: pointer;
@@ -112,7 +108,6 @@ body {
 
   .header__links_opened {
     display: flex;
-    /*  */
     visibility: visible;
     animation: showMenu 0.3s ease-in-out 1;
     animation-fill-mode: both;
@@ -220,33 +215,30 @@ body {
 
 .section__select {
   display: none;
+  margin: 0 0 0 auto;
+  padding: 0.4375rem 1.9375rem 0.5rem 1rem;
+  border: none;
+  border-radius: 1.25rem;
+  font-size: 0.8125rem;
+  font-family: inherit;
+  font-weight: bold;
+  background: no-repeat calc(100% - 1rem) 50% #ffd93e url(assets/arrow-down.svg);
+  appearance: none;
 }
 
 @media (max-width: 768px) {
   .section__select {
     display: block;
-    margin: 0 0 0 auto;
-    padding: 0.4375rem 1.9375rem 0.5rem 1rem;
-    border: none;
-    border-radius: 1.25rem;
-    font-size: 0.8125rem;
-    font-family: inherit;
-    font-weight: bold;
-    background: no-repeat calc(100% - 1rem) 50% #ffd93e
-      url(assets/arrow-down.svg);
-    appearance: none;
   }
 }
 
-@media (min-width: 768px) {
-  .section__tabs {
-    display: flex;
-    gap: 0.625rem;
-    align-items: baseline;
-    margin: 0 0 0 0.8125rem;
-    padding: 0;
-    list-style: none;
-  }
+.section__tabs {
+  display: flex;
+  gap: 0.625rem;
+  align-items: baseline;
+  margin: 0 0 0 0.8125rem;
+  padding: 0;
+  list-style: none;
 }
 
 @media (max-width: 768px) {
@@ -256,7 +248,6 @@ body {
 }
 
 .section__tab {
-  /*  */
   flex: 0 0 auto;
   padding: 0.4375rem 0.9375rem 0.5rem;
   font-size: 0.8125rem;
@@ -402,7 +393,6 @@ body {
 
 .hero-dashboard__schedule {
   display: flex;
-  /*  */
   flex: 0 0 auto;
   flex-direction: column;
   gap: 0.9375rem;
