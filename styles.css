@@ -276,16 +276,10 @@ body {
   display: flex;
   gap: 0.9375rem;
   height: 20.6875rem;
-  background: no-repeat 50% 50% url(assets/bg@1x.png);
+  background: no-repeat 50% 50% url(assets/bg@2x.png);
   background-size: cover;
   background-size: 1260px;
   border-radius: 1.25rem;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 130dpi) {
-  .hero-dashboard {
-    background: no-repeat 50% 50% url(assets/bg@2x.png);
-  }
 }
 
 @media (max-width: 768px) {
