@@ -93,12 +93,6 @@
       links.classList.add('header__links-toggled');
     });
   }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    let devices = document.querySelector('.main__devices');
-    makeTabs(devices);
-
-    let menu = document.querySelector('.header__menu');
-    makeMenu(menu);
-  });
+  makeTabs(document.querySelector('.main__devices'));
+  makeMenu(document.querySelector('.header__menu'));
 })();
